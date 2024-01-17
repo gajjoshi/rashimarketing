@@ -33,26 +33,26 @@ export default function Contact() {
     data.append("phone", phone);
     data.append("message", message);
 
-    let config = {
-      method: "post",
-      maxBodyLength: Infinity,
-      url: "http://skfprodhouse.pythonanywhere.com/contactus/",
-      data: data,
-    };
+    // let config = {
+    //   method: "post",
+    //   maxBodyLength: Infinity,
+    //   url: "http://skfprodhouse.pythonanywhere.com/contactus/",
+    //   data: data,
+    // };
 
-    async function makeRequest() {
-      try {
-        const response = await axios.request(config);
-        console.log(response.data);
-        setEmail("");
-        setName("");
-        setMessage("");
-      } catch (error) {
-        //console.log(error);
-      }
-    }
+    // async function makeRequest() {
+    //   try {
+    //     const response = await axios.request(config);
+    //     console.log(response.data);
+    //     setEmail("");
+    //     setName("");
+    //     setMessage("");
+    //   } catch (error) {
+    //     //console.log(error);
+    //   }
+    // }
 
-    makeRequest();
+    // makeRequest();
   };
   return (
     <>
@@ -98,10 +98,10 @@ export default function Contact() {
                     paddingTop: "100px",
                   }}
                 >
-                  <IconButton>
+                  {/* <IconButton>
                     <EmailIcon sx={{ color: "red" }}></EmailIcon>
-                  </IconButton>
-                  <div
+                  </IconButton> */}
+                  {/* <div
                     style={{
                       display: "inline",
                       fontStyle: "bold",
@@ -110,8 +110,8 @@ export default function Contact() {
                       color: "black",
                     }}
                   >
-                    mail.com
-                  </div>
+                    aditya.tiwari@sparkreachmedia.com
+                  </div> */}
                   <div style={{ padding: "20px", paddingLeft: "0px" }}>
                     <IconButton>
                       <CallIcon sx={{ color: "red" }}></CallIcon>
@@ -125,7 +125,7 @@ export default function Contact() {
                         color: "black",
                       }}
                     >
-                      9999999999
+                      +91 88585 85149
                     </div>
                   </div>
                   <div>
@@ -142,7 +142,7 @@ export default function Contact() {
                         paddingBottom: "50px",
                       }}
                     >
-                      Andheri west
+                      Malad West
                     </div>
                   </div>
                   <div>
@@ -157,7 +157,7 @@ export default function Contact() {
                       }}
                     >
                       <a
-                        href="https://goo.gl/maps/hfN21Ekrruinavqz7"
+                        href="https://maps.app.goo.gl/z6ABHJqiVMFeeyw86"
                         target="_blank"
                       >
                         <img

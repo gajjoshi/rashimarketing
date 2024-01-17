@@ -6,29 +6,21 @@ export default function About() {
       <section id="about" class=" md:p-20">
         <div class="border-2 border-offBlack p-10 m-20">
           <div class="lg:flex gap-x-10">
-            <div class="w-full lg:w-2/4 h-[300px] md:h-[500px] bg-cover bg-center bg-[url('https://media.licdn.com/dms/image/C4E03AQG4cs7S3MvijQ/profile-displayphoto-shrink_800_800/0/1516551403775?e=2147483647&v=beta&t=rKbkfZyKVfhXZf5fPtKtpUhZ79AJP3asIovj_7Iy3sw')] flex justify-center items-end mb-10">
+            {/* <div class="w-full lg:w-2/4 h-[300px] md:h-[500px] bg-cover bg-center bg-[url('https://media.licdn.com/dms/image/C4E03AQG4cs7S3MvijQ/profile-displayphoto-shrink_800_800/0/1516551403775?e=2147483647&v=beta&t=rKbkfZyKVfhXZf5fPtKtpUhZ79AJP3asIovj_7Iy3sw')] flex justify-center items-end mb-10">
               <h1 class="font-bebas text-xl md:text-4xl text-offBlack bg-white w-11/12 text-center drop-shadow-2xl rounded-md py-2 -mb-6">
                 21 YEARS of EXPERIENCE
               </h1>
-            </div>
+            </div> */}
             <div class="w-full lg:w-2/4 h-full font-bebas">
               {/* <p class="text-xl md:text-3xl mt-2">ABOUT US</p> */}
-              <h1 class="text-5xl md:text-7xl mt-5">Who is Sanjay Sharma ?</h1>
+              <h1 class="text-5xl md:text-7xl mt-5" style={{alignContent:"center"}}>What does Spark Reach Media Do ?</h1>
               {/* <h1 class="text-5xl md:text-7xl">Just Got better</h1> */}
               <p class="font-montserrat mt-10">
-                Sanjay Sharma , son of late veteran filmmaker K C Sharma, is an
-                internationally popular award winning Indian director,
-                screenplay writer, editor and producer. His recent projects
-                include Paranormal : Based on True Facts (Horror Thriller) 2020.
-                Military Raj, His next directorial venture, Dunnoy Na Jaane Kyun
-                Internationally Awarded. Dunnoy 2 Life Is A Moment is being
-                produced by Hungry Hearts, a European production house in
-                association with Shantketan Films. Also directed documentary
-                film and ad film. Sanjay Sharma is a director and writer, known
-                for Jaane Bhi Do Yaaro (2018), and National Treasure: The Blood
-                Run (2019). Presently working on Web Series Eagle Eye and
-                Internatinal project produced by Internatinal Originals USA ,
-                Bollywood N VIne (under pre- production) .{" "}
+              At Spark Reach Media, we serve as a comprehensive catalyst for success in the film and entertainment industry. Our multifaceted services encompass film distribution, where we navigate the intricate digital landscape to ensure your content finds its optimal home on premier OTT platforms. Additionally, our streamlined pre-approval processes empower filmmakers, facilitating efficient approvals for diverse and impactful storytelling.
+
+Beyond distribution and pre-approval, Spark Reach Media excels in innovative marketing solutions that set your content apart. We craft captivating campaigns and orchestrate unforgettable events, strategically designed to resonate with today's dynamic audiences. Whether you're a seasoned filmmaker or a budding storyteller, our services go beyond the conventional, providing end-to-end support at every stage of your cinematic journey.
+
+In essence, Spark Reach Media is your dedicated partner, offering a full spectrum of services to elevate the visibility and success of your projects. From sparking connections with global audiences to ensuring your content stands out in a crowded digital landscape, we are here to redefine the possibilities of cinematic storytelling.
               </p>
               <button class="border-2 border-black px-5 py-2 text-xl mt-10 hover:bg-yellow hover:text-black hover:border-yellow transition-all font-bebas">
                 Discover More

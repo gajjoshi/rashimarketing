@@ -20,3 +20,9 @@
   font-size: 100px;
   z-index: 1;
 }
+
+@media (max-width: 768px) {
+  .content {
+    display: none; /* Hide the text on screens smaller than 768px */
+  }
+}
