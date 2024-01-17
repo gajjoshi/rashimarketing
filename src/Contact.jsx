@@ -1,10 +1,8 @@
 import React from "react";
-import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from "@mui/icons-material/Call";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Grid, IconButton, Typography, Button } from "@mui/material";
 import TextField from "@mui/material/TextField";
-import axios from "axios";
 import { FormControl } from "@mui/base";
 import { useState } from "react";
 export default function Contact() {
@@ -156,7 +154,7 @@ export default function Contact() {
                         paddingTop: "100px",
                       }}
                     >
-                      <a
+                      {/* <a
                         href="https://maps.app.goo.gl/z6ABHJqiVMFeeyw86"
                         target="_blank"
                       >
@@ -164,7 +162,7 @@ export default function Contact() {
                           src=""
                           style={{ width: "70%", paddingTop: "30px" }}
                         />
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </Grid>

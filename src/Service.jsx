@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./Services.css";
-import image1 from './assets/weddings.png';
 
 const data1 = [
   { id: 1, title: "Digital Media", description: "Mesmerizing your marketing experience"},
   { id: 2, title: "Movie/Web Series Distribution", description: "Become risk free by getting onboard the studio right before the shoot" },
-  { id: 3, title: "Events", description: "transforms events into unforgettable experiences, providing end-to-end event services that seamlessly blend creativity" },
+  { id: 3, title: "Events", description: "Transforms events into unforgettable experiences, providing end-to-end event services that seamlessly blend creativity" },
 
   // Add more data as needed
 ];

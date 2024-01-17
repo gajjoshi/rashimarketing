@@ -1,10 +1,8 @@
 import { useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import Header from './Header'
 import Intro from './Intro'
 import About from './About'
-import Movies from './Movies'
 import Footer from './Footer'
 import Service from './Service'
 import { Link, animateScroll as scroll } from 'react-scroll';
