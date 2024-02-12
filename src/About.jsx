@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div>
       <section id="about" class=" md:p-20">
-        <div class="border-2 border-offBlack p-10 m-20">
+        <div class="border-2 border-offBlack p-5 m-10">
           <div class="lg:flex gap-x-10">
             {/* <div class="w-full lg:w-2/4 h-[300px] md:h-[500px] bg-cover bg-center bg-[url('https://media.licdn.com/dms/image/C4E03AQG4cs7S3MvijQ/profile-displayphoto-shrink_800_800/0/1516551403775?e=2147483647&v=beta&t=rKbkfZyKVfhXZf5fPtKtpUhZ79AJP3asIovj_7Iy3sw')] flex justify-center items-end mb-10">
               <h1 class="font-bebas text-xl md:text-4xl text-offBlack bg-white w-11/12 text-center drop-shadow-2xl rounded-md py-2 -mb-6">
