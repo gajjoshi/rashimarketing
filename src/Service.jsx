@@ -68,8 +68,36 @@ export default function Service() {
             Our PRODUCTS
           </p>
           <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
-            What We Offer
+            GLASS FIBRES
           </h1>
+          <div className="card-slider-container">
+            <Slider {...settings} className="card-slider">
+              {data1.map((item) => (
+                <div key={item.id} className="flip-card-container">
+                  <div
+                    className={`flip-card ${
+                      flippedCards.includes(item.id) ? "flipped" : ""
+                    }`}
+                    onClick={() => handleCardClick(item.id)}
+                  >
+                    <div className="flip-card-inner">
+                      <div className="flip-card-front">
+                        <h2 className="title">{item.title}</h2>
+                      </div>
+                      <div className="flip-card-back">
+                        <h2 className="title">{item.description}</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="caption">{item.caption}</p>
+                </div>
+              ))}
+            </Slider>
+          </div>
+          <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
+            WATERPROOFING MEMBRANE
+          </h1>
+
           <div className="card-slider-container">
             <Slider {...settings} className="card-slider">
               {data1.map((item) => (

@@ -4,6 +4,7 @@ import Intro from './Intro'
 import About from './About'
 import Footer from './Footer'
 import Service from './Service'
+
 // import People from './People'
 import { Link, animateScroll as scroll } from 'react-scroll';
 import Contact from './Contact'
@@ -52,6 +53,7 @@ function App() {
       {/* <div id='servicelink' style={{marginTop: 50}}>
         <People/>
       </div> */}
+
 
 
       <div id='contactlink'>
