@@ -1,6 +1,6 @@
 .flip-card {
   background-color: transparent;
-  width: 500px; /* Adjust the default width as needed */
+  width: 400px; /* Adjust the default width as needed */
   height: 270px;
   perspective: 1000px;
   font-family: sans-serif;

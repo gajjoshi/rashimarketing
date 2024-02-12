@@ -17,4 +17,3 @@ export default function Intro() {
     </>
   )
 }
-// bg-[url('https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]
