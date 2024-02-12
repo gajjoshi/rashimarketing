@@ -21,7 +21,7 @@ export default function About() {
               </p>
               <button 
   class="border-2 border-black px-5 py-2 text-xl mt-10 hover:bg-yellow hover:text-black hover:border-yellow transition-all font-bebas"
-  onClick={() => window.location.href = 'https://wa.me/'}
+  onClick={() => window.location.href = 'https://wa.me/9821152164'}
 >
   Contact
 </button>
