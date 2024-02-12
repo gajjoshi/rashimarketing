@@ -190,7 +190,7 @@ const handleToggleLess = () => {
 
 
               <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
-              Asphalt Roofing Shingles
+              Self Closing Doors
               </h1>
               <div className="card-slider-container">
                 <Slider {...settings} className="card-slider">
