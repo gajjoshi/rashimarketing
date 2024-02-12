@@ -26,9 +26,10 @@ const data1 = [
 
 export default function Service() {
   const [flippedCards, setFlippedCards] = useState([]);
+  const [showMore, setShowMore] = useState(false);
+  const [showLess, setShowLess] = useState(false);
 
   const handleCardClick = (id) => {
-    // Toggle the state of the clicked card
     setFlippedCards((prevFlippedCards) => {
       if (prevFlippedCards.includes(id)) {
         return prevFlippedCards.filter((cardId) => cardId !== id);
@@ -38,10 +39,19 @@ export default function Service() {
     });
   };
 
+  const handleToggleProducts = () => {
+    setShowMore(!showMore);
+    setShowLess(false);
+  };
+const handleToggleLess = () => {
+  setShowLess(!showLess);
+  setShowMore(false); // Set showMore to false when showing less
+};
+
   const settings = {
     dots: false,
     infinite: true,
-    speed: 5000, // Adjust speed as needed
+    speed: 5000,
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: "linear",
@@ -68,7 +78,7 @@ export default function Service() {
             Our PRODUCTS
           </p>
           <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
-            GLASS FIBRES
+            GLASS FIBRE
           </h1>
           <div className="card-slider-container">
             <Slider {...settings} className="card-slider">
@@ -95,33 +105,138 @@ export default function Service() {
             </Slider>
           </div>
           <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
-            WATERPROOFING MEMBRANE
-          </h1>
-
-          <div className="card-slider-container">
-            <Slider {...settings} className="card-slider">
-              {data1.map((item) => (
-                <div key={item.id} className="flip-card-container">
-                  <div
-                    className={`flip-card ${
-                      flippedCards.includes(item.id) ? "flipped" : ""
-                    }`}
-                    onClick={() => handleCardClick(item.id)}
-                  >
-                    <div className="flip-card-inner">
-                      <div className="flip-card-front">
-                        <h2 className="title">{item.title}</h2>
+          Waterproofing Membrane
+              </h1>
+              <div className="card-slider-container">
+                <Slider {...settings} className="card-slider">
+                  {data1.slice(3).map((item) => (
+                    <div key={item.id} className="flip-card-container">
+                      <div
+                        className={`flip-card ${
+                          flippedCards.includes(item.id) ? "flipped" : ""
+                        }`}
+                        onClick={() => handleCardClick(item.id)}
+                      >
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front">
+                            <h2 className="title">{item.title}</h2>
+                          </div>
+                          <div className="flip-card-back">
+                            <h2 className="title">{item.description}</h2>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flip-card-back">
-                        <h2 className="title">{item.description}</h2>
-                      </div>
+                      <p className="caption">{item.caption}</p>
                     </div>
-                  </div>
-                  <p className="caption">{item.caption}</p>
-                </div>
-              ))}
-            </Slider>
-          </div>
+                  ))}
+                </Slider>
+              </div>
+          {showMore && (
+            <>
+              <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
+              Prefinished Siding
+              </h1>
+              <div className="card-slider-container">
+                <Slider {...settings} className="card-slider">
+                  {data1.slice(3).map((item) => (
+                    <div key={item.id} className="flip-card-container">
+                      <div
+                        className={`flip-card ${
+                          flippedCards.includes(item.id) ? "flipped" : ""
+                        }`}
+                        onClick={() => handleCardClick(item.id)}
+                      >
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front">
+                            <h2 className="title">{item.title}</h2>
+                          </div>
+                          <div className="flip-card-back">
+                            <h2 className="title">{item.description}</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <p className="caption">{item.caption}</p>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+              <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
+              Asphalt Roofing Shingles
+              </h1>
+              <div className="card-slider-container">
+                <Slider {...settings} className="card-slider">
+                  {data1.slice(3).map((item) => (
+                    <div key={item.id} className="flip-card-container">
+                      <div
+                        className={`flip-card ${
+                          flippedCards.includes(item.id) ? "flipped" : ""
+                        }`}
+                        onClick={() => handleCardClick(item.id)}
+                      >
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front">
+                            <h2 className="title">{item.title}</h2>
+                          </div>
+                          <div className="flip-card-back">
+                            <h2 className="title">{item.description}</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <p className="caption">{item.caption}</p>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+
+
+              <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
+              Asphalt Roofing Shingles
+              </h1>
+              <div className="card-slider-container">
+                <Slider {...settings} className="card-slider">
+                  {data1.slice(3).map((item) => (
+                    <div key={item.id} className="flip-card-container">
+                      <div
+                        className={`flip-card ${
+                          flippedCards.includes(item.id) ? "flipped" : ""
+                        }`}
+                        onClick={() => handleCardClick(item.id)}
+                      >
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front">
+                            <h2 className="title">{item.title}</h2>
+                          </div>
+                          <div className="flip-card-back">
+                            <h2 className="title">{item.description}</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <p className="caption">{item.caption}</p>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+
+
+
+              
+
+
+
+
+
+
+
+              <button onClick={handleToggleLess} className="text-white py-2 px-4 rounded bg-blue-500 hover:bg-blue-600">
+                Show Less
+              </button>
+            </>
+          )}
+          {!showMore && !showLess && (
+            <button onClick={handleToggleProducts} className="text-white py-2 px-4 rounded bg-blue-500 hover:bg-blue-600">
+              Load More
+            </button>
+          )}
         </div>
       </section>
     </div>
