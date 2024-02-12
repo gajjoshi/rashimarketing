@@ -123,7 +123,7 @@ export default function Contact() {
                         color: "black",
                       }}
                     >
-                      +91 88585 85149
+                      +91 9821152164
                     </div>
                   </div>
                   <div>
@@ -140,7 +140,7 @@ export default function Contact() {
                         paddingBottom: "50px",
                       }}
                     >
-                      Malad West
+                      Kandivali West
                     </div>
                   </div>
                   <div>

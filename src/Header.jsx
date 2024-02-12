@@ -72,7 +72,7 @@ export default function Header() {
     <div style={{position:"sticky",zIndex:"5 ",top:0,backgroundColor:"",paddingTop:"0px"}} >
       <header class="w-full h-20 flex justify-center absolute " style={nav}>
         <nav class="w-4/5 flex justify-between items-center font-bebas">
-          <h1 class="text-3xl uppercase">SPARK REACH MEDIA</h1>
+          <h1 class="text-3xl uppercase">RASHI MARKETING</h1>
           <ul class="md:flex gap-x-5 text-xl hidden">
           <Link activeClass='active' to='introlink' spy={true} smooth={true} offset={0} duration={500}>
               <li class="cursor-pointer">
@@ -91,7 +91,12 @@ export default function Header() {
             </Link> */}
             <Link activeClass='active' to='servicelink' spy={true} smooth={true} offset={-100} duration={500}>
               <li class="cursor-pointer">
-                <div style={s3}>Services</div>
+                <div style={s3}>Our Products</div>
+              </li>
+            </Link>
+            <Link activeClass='active' to='ourpeople' spy={true} smooth={true} offset={-100} duration={500}>
+              <li class="cursor-pointer">
+                <div style={s3}>People</div>
               </li>
             </Link>
             <Link activeClass='active' to='contactlink' spy={true} smooth={true} offset={0} duration={500}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import bgvideo from './assets/video2.mp4'
+import bgvideo from './assets/video3.mp4'
 import './intro.css'
 export default function Intro() {
   return (

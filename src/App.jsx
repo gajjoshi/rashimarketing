@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
-
 import Header from './Header'
 import Intro from './Intro'
 import About from './About'
 import Footer from './Footer'
 import Service from './Service'
+// import People from './People'
 import { Link, animateScroll as scroll } from 'react-scroll';
 import Contact from './Contact'
 
@@ -41,15 +41,19 @@ function App() {
       <div id='introlink'>
         <Intro/>
       </div>
+      
       <div id='aboutlink'>
         <About/>
       </div>
-      {/* <div id='movielink'>
-        <Movies/>
-      </div> */}
       <div id='servicelink'>
         <Service/>
-      </div>
+      </div>  
+
+      {/* <div id='servicelink' style={{marginTop: 50}}>
+        <People/>
+      </div> */}
+
+
       <div id='contactlink'>
         <Contact/>
       </div>

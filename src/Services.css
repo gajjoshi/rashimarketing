@@ -1,29 +1,27 @@
 .flip-card {
   background-color: transparent;
-  width: 250px;
+  width: 500px; /* Adjust the default width as needed */
   height: 270px;
   perspective: 1000px;
   font-family: sans-serif;
-  margin: 20px; /* Adjust the margin to add spacing between cards */
+  margin: 0 5px; /* Adjust the margin for spacing between cards */
 
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    width: 300px; /* Adjust the width for smaller screens */
+  }
 }
-/* 
-.flip-card {
-  width: 220px;
-  height: 254px;
-  background-image: linear-gradient(163deg, #00a666 0%, #b1890e 100%);
-  border-radius: 20px;
-  transition: all 0.3s;
-  color: white;
-} */
-
+.flip-card-container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 .title {
   font-size: 1.5em;
   font-weight: 900;
   text-align: center;
   margin: 0;
-  color: white;
 }
 
 .flip-card-inner {
@@ -39,7 +37,8 @@
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
   position: absolute;
   display: flex;
@@ -54,50 +53,46 @@
 }
 
 .flip-card-front {
-  background: linear-gradient(120deg, rgb(224, 60, 60) 60%, rgb(219, 101, 58) 88%,
-    rgb(199, 118, 13) 40%, rgba(248, 122, 3, 0.603) 48%);
+  background: linear-gradient(120deg, rgb(224, 60, 60) 60%, rgb(219, 101, 58) 88%, rgb(199, 118, 13) 40%, rgba(248, 122, 3, 0.603) 48%);
   color: rgb(197, 85, 85);
 }
 
 .flip-card-back {
-  background: linear-gradient(120deg, rgb(255, 174, 145) 30%, rgb(128, 64, 41) 88%,
-    bisque 40%, rgb(255, 185, 160) 78%);
+  background: linear-gradient(120deg, rgb(255, 174, 145) 30%, rgb(128, 64, 41) 88%, bisque 40%, rgb(255, 185, 160) 78%);
   color: white;
   transform: rotateY(180deg);
 }
 
-.cardd {
-  width: 220px;
-  height: 254px;
-  background-image: linear-gradient(163deg, #00a666 0%, #b1890e 100%);
-  border-radius: 20px;
-  transition: all .3s;
-  color: white;
-  margin: 10px;
+.card-slider {
+  padding: 0 15px; /* Adjust padding for slider */
 }
 
-.cardd2 {
-  width: 220px;
-  height: 254px;
-  background-color: #000000;
-  border-radius: 5px;
-  transition: all .2s;
-  border: white 1px solid;
-  top: 0;
-}
-
-.cardd2:hover {
-  transform: scale(0.98);
-  border-radius: 20px;
-}
-
-.cardd:hover {
-  box-shadow: 0px 0px 30px 1px rgba(39, 253, 35, 0.3);
-}
-
-.text {
-  align-items: center;
-  justify-content: center;
-  padding-top: 30px;
+.caption {
   text-align: center;
+  margin-top: 10px; /* Adjust margin as needed */
+  font-size: 1em; /* Adjust font size as needed */
+  color: #555; /* Adjust color as needed */
+}
+
+.card-slider-container {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.card-slider-container:hover .slick-slider {
+  animation-play-state: paused;
+}
+
+.card-slider-container .slick-slider {
+  animation: scrollAnimation infinite linear;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
