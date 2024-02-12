@@ -7,17 +7,17 @@ import "./Services.css";
 const data1 = [
   { 
     id: 1, 
-    title: "WPE55", 
-    description: "EWF", 
+    title: "CRACK FIX SOLUTION", 
+    description: "Image", 
     caption: (
       <>
-        <p>Caption 1 sfd sdf sf</p>
-        <p>f erf erf e</p>
-        <p>rf erf erf</p>
+        <p>Pakaging Size : 5-20KG</p>
+        <p>Physical State : Powder</p>
+        <p>Shelf Life : 24 months</p>
       </>
     ) 
   },
-  { id: 2, title: "P2", description: "SDF", caption: "Caption 2" },
+  { id: 2, title: "P2", description: "Packaging Size:5-20 Kg,Packaging Type	Bag,Physical State	Powder,Shelf Life	24 Months", caption: "Packaging Size:5-20 Kg" },
   { id: 3, title: "P3", description: "DS", caption: "Caption 3" },
   { id: 4, title: "P4", description: "DS", caption: "Caption 4" },
   { id: 5, title: "P5", description: "DS", caption: "Caption 5" },
@@ -92,7 +92,7 @@ const handleToggleLess = () => {
                   >
                     <div className="flip-card-inner">
                       <div className="flip-card-front">
-                        <h2 className="title">{item.title}</h2>
+                        <h2 className="title" >{item.title}</h2>
                       </div>
                       <div className="flip-card-back">
                         <h2 className="title">{item.description}</h2>

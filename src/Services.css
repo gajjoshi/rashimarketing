@@ -4,6 +4,7 @@
   height: 270px;
   perspective: 1000px;
   font-family: sans-serif;
+  color: #ffffff;
   margin: 0 5px; /* Adjust the margin for spacing between cards */
 
   /* Media query for smaller screens */
@@ -22,6 +23,7 @@
   font-weight: 900;
   text-align: center;
   margin: 0;
+  color: #ffffff;
 }
 
 .flip-card-inner {
@@ -70,8 +72,11 @@
 .caption {
   text-align: left;
   margin-top: 10px; /* Adjust margin as needed */
-  font-size: 1em; /* Adjust font size as needed */
+  font-size: 1.5em; /* Adjust font size as needed */
   color: #ffffff; /* Adjust color as needed */
+  @media screen and (max-width: 768px) {
+    font-size: 1em; /* Adjust font size as needed */
+  }
 }
 
 .card-slider-container {
