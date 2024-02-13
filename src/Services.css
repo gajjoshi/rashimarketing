@@ -50,19 +50,30 @@
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border: 1px solid coral;
+  /* border: 1px solid coral; */
   border-radius: 1rem;
 }
 
 .flip-card-front {
   background: linear-gradient(120deg, rgb(224, 60, 60) 60%, rgb(219, 101, 58) 88%, rgb(199, 118, 13) 40%, rgba(248, 122, 3, 0.603) 48%);
   color: rgb(197, 85, 85);
+  /* Adjust the background size and position to accommodate the image */
+  /* background-image: url('./assets/glass.png');  */
+  
 }
-
 .flip-card-back {
+  position: relative;
   background: linear-gradient(120deg, rgb(255, 174, 145) 30%, rgb(128, 64, 41) 88%, bisque 40%, rgb(255, 185, 160) 78%);
   color: white;
   transform: rotateY(180deg);
+  background-size: cover; /* or contain, depending on your preference */
+  background-size: 100% 100%; /* Image will cover the entire container */
+  border-radius: 1rem; /* Same border radius as the container */
+
+
+  background-position: center; /* or any other suitable position */
+  overflow: hidden; /* Add this line */
+
 }
 
 .card-slider {

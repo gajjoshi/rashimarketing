@@ -3,6 +3,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Services.css";
+import a1 from "./assets/glass.png"
+import a2 from "./assets/glass2.png"
+import a3 from "./assets/glass3.png"
+import a4 from "./assets/glass4.png"
+
+
+
 
 const data1 = [
   { 
@@ -13,15 +20,81 @@ const data1 = [
       <>
         <p>Pakaging Size : 5-20KG</p>
         <p>Physical State : Powder</p>
-        <p>Shelf Life : 24 months</p>
       </>
-    ) 
+    ),
+    image:a1
   },
-  { id: 2, title: "P2", description: "Packaging Size:5-20 Kg,Packaging Type	Bag,Physical State	Powder,Shelf Life	24 Months", caption: "Packaging Size:5-20 Kg" },
-  { id: 3, title: "P3", description: "DS", caption: "Caption 3" },
-  { id: 4, title: "P4", description: "DS", caption: "Caption 4" },
-  { id: 5, title: "P5", description: "DS", caption: "Caption 5" },
-  { id: 6, title: "P6", description: "DS", caption: "Caption 6" },
+
+
+
+
+
+  { 
+    id: 2, 
+    title: "AR GLASS FIBRE", 
+    description: "Image", 
+    caption: (
+      <>
+        <p>Pakaging GSM : 300-450</p>
+        <p>Physical State : Powder</p>
+        <p>Packaging Size :	20-25 Kg</p>
+        <p>Density : 100 kg/m3</p>
+
+      </>
+    ),
+    image:a2
+  },
+
+
+
+  { 
+    id: 3, 
+    title: "White Chopped Strands Glass Fiber, For Concrete Reinforcement", 
+    description: "Image", 
+    caption: (
+      <>
+        <p>Glass Fiber Type	: Chopped Strands</p>
+        <p>Usage/Application	: Concrete Reinforcement</p>
+        <p>Size	
+12-13 Micron</p>
+        <p>Material	Glass : Fiber</p>
+
+      </>
+    ),
+    image:a3
+  },
+
+
+  { 
+    id: 4, 
+    title: "FIBERLESS GLASS MESH", 
+    description: "Image", 
+    caption: (
+      <>
+        <p>GSM :	60-80 GSM</p>
+        <p>Weight	: 30-100 gram per square meter</p>
+        <p>Thickness	: 0.1 to 1 mm</p>
+        <p>Length :	20-60 m</p>
+
+      </>
+    ),
+    image:a4
+  },
+
+
+
+
+
+
+
+
+
+
+
+  { id: 3, title: "P3", description: "DS", caption: "Caption 3" ,image:{a1}},
+  { id: 4, title: "P4", description: "DS", caption: "Caption 4" ,image:{a1}},
+  { id: 5, title: "P5", description: "DS", caption: "Caption 5",image:{a1} },
+  { id: 6, title: "P6", description: "DS", caption: "Caption 6",image:{a1} },
 ];
 
 export default function Service() {
@@ -93,9 +166,12 @@ const handleToggleLess = () => {
                     <div className="flip-card-inner">
                       <div className="flip-card-front">
                         <h2 className="title" >{item.title}</h2>
+
                       </div>
                       <div className="flip-card-back">
-                        <h2 className="title">{item.description}</h2>
+                        {/* <h2 className="title">{item.description}</h2> */}
+                        <img src={item.image} alt={item.title} />
+
                       </div>
                     </div>
                   </div>
