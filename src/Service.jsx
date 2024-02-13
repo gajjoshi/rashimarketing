@@ -154,6 +154,7 @@ const handleToggleLess = () => {
             GLASS FIBRE
           </h1>
           <div className="card-slider-container">
+            
             <Slider {...settings} className="card-slider">
               {data1.map((item) => (
                 <div key={item.id} className="flip-card-container">
