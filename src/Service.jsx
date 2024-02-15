@@ -11,6 +11,17 @@ import b1 from "./assets/wp1.png";
 import b2 from "./assets/wp2.png";
 import b3 from "./assets/wp3.png";
 
+import c1 from "./assets/c1.png";
+import c2 from "./assets/c2.png";
+import c3 from "./assets/c3.png";
+
+import d1 from "./assets/d1.png";
+
+import e1 from "./assets/e1.png";
+import e2 from "./assets/e2.png";
+import e3 from "./assets/e3.png";
+
+
 const data1 = [
   {
     id: 1,
@@ -105,6 +116,130 @@ const data2 = [
     image: b3
   }
 ];
+
+
+
+
+
+const data3 = [
+  {
+    id: 1,
+    title: "ULTRA PLANK PREMIUM PREFINISHED SLIDING",
+    description: "Image",
+    caption: (
+      <>
+        <p>Material	: Vinyl</p>
+        <p>Color :	Brown</p>
+        <p>Thickness :	1-20 mm</p>
+        <p>Shape	Rectangular</p>
+      </>
+    ),
+    image: c1
+  },
+  {
+    id: 2,
+    title: "PREMIUM PREFINISHED SLIDING",
+    description: "Image",
+    caption: (
+      <>
+        <p>Material :	Wooden</p>
+        <p>Color :	Brown</p>
+        <p>Thickness :	6-15 mm</p>
+        <p>Shape ;	Rectangular</p>
+      </>
+    ),
+    image: c2
+  },
+  {
+    id: 3,
+    title: "PREMIUM PREFINISHED EXTERIOR SLIDING",
+    description: "Image",
+    caption: <>
+    <p>Material :	Vinyl</p>
+    <p>Thickness :	4-16 mm</p>
+    <p>Shape :	Rectangular</p>
+    <p>Packaging Type :	Box</p>
+  </>,
+    image: c3
+  }
+];
+
+
+
+
+
+
+const data4 = [
+  {
+    id: 1,
+    title: "ASPHALT ROOFING SHINGLES",
+    description: "Image",
+    caption: (
+      <>
+        <p>Material :	Asphalt Cement</p>
+        <p>Pattern	: Flat tile</p>
+        <p>Surface Treatment :	Color Coated</p>
+        <p>Technique :	Hot Rolled / Cold Rolled</p>
+      </>
+    ),
+    image: d1
+  }
+];
+
+
+
+
+
+const data5 = [
+  {
+    id: 1,
+    title: "FRAMELESS SLIDING DOOR",
+    description: "Image",
+    caption: (
+      <>
+        <p>Material	Glass</p>
+        <p>Opening Pattern	Horizontal</p>
+        <p>Weight	80Kg</p>
+        <p>Thickness	10-20 mm</p>
+      </>
+    ),
+    image: e1
+  },
+  {
+    id: 2,
+    title: "SELF CLOSING SLIDING DOOR",
+    description: "Image",
+    caption: (
+      <>
+        <p>Material	Glass</p>
+        <p>Height	7-8 Feet</p>
+        <p>Glass Thickness	12-20 mm</p>
+        <p>Length	6-7 Feet</p>
+      </>
+    ),
+    image: e2
+  },
+  {
+    id: 3,
+    title: "SEMI AUTOMATIC DOORS",
+    description: "Image",
+    caption: <>
+    <p>Material	Aluminium</p>
+    <p>Surface Treatment	Color Coated</p>
+    <p>Technique	Hot Rolled</p>
+    <p>Door Type	Hinged</p>
+  </>,
+    image: e3
+  }
+];
+
+
+
+
+
+
+
+
 
 export default function Service() {
   const [flippedCards, setFlippedCards] = useState([]);
@@ -216,14 +351,22 @@ export default function Service() {
                   ))}
                 </Slider>
               </div>
+
+              
+
+
+
+
+
+
           {showMore && (
             <>
               <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
-                Waterproofing Membrane
+                PREFINISHED SIDING
               </h1>
               <div className="card-slider-container">
                 <Slider {...settings} className="card-slider">
-                  {data2.map((item) => (
+                  {data3.map((item) => (
                     <div key={item.id} className="flip-card-container">
                       <div
                         className={`flip-card ${
@@ -241,16 +384,137 @@ export default function Service() {
                         </div>
                       </div>
                       <p className="caption">{item.caption}</p>
+                      
                     </div>
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   ))}
                 </Slider>
               </div>
-              <button
-                onClick={handleToggleLess}
-                className="text-white py-2 px-4 rounded bg-blue-500 hover:bg-blue-600"
-              >
-                Show Less
-              </button>
+
+
+
+              <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
+                SELF CLOSING DOORS
+              </h1>
+              <div className="card-slider-container">
+                <Slider {...settings} className="card-slider">
+                  {data5.map((item) => (
+                    <div key={item.id} className="flip-card-container">
+                      <div
+                        className={`flip-card ${
+                          flippedCards.includes(item.id) ? "flipped" : ""
+                        }`}
+                        onClick={() => handleCardClick(item.id)}
+                      >
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front">
+                            <h2 className="title">{item.title}</h2>
+                          </div>
+                          <div className="flip-card-back">
+                            <img src={item.image} alt={item.title} />
+                          </div>
+                        </div>
+                      </div>
+                      <p className="caption">{item.caption}</p>
+                      
+                    </div>
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  ))}
+                </Slider>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
+                ASPHALT ROOFING
+              </h1>
+              <div className="card-slider-container" style={{alignContent:"center"}}>
+                  {data4.map((item) => (
+                    <div key={item.id} className="flip-card-container">
+                      <div
+                        className={`flip-card ${
+                          flippedCards.includes(item.id) ? "flipped" : ""
+                        }`}
+                        onClick={() => handleCardClick(item.id)}
+                      >
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front">
+                            <h2 className="title">{item.title}</h2>
+                          </div>
+                          <div className="flip-card-back">
+                            <img src={item.image} alt={item.title} />
+                          </div>
+                        </div>
+                      </div>
+                      <p className="caption">{item.caption}</p>
+                      
+                    </div>
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  ))}
+              </div>
+              
             </>
           )}
           {!showMore && !showLess && (

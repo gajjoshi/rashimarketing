@@ -1,6 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
 import { Link, animateScroll as scroll } from 'react-scroll';
+
+// Import your logo image
+import logo from './assets/logo.jpeg';
+
 export default function Header() {
   const [s, setS] = React.useState(0);
   const [st, setSt] = React.useState(0);
@@ -37,11 +41,11 @@ export default function Header() {
     }
 
   };
-  const s5 = st==5?{borderBottom:"2px solid white",color:"white"}:{color:"black"}
-  const s1 = st==1?{borderBottom:"2px solid black",color:"black"}:st==5?{color:"white"}:{color:"black"}
-  const s2 = st==2?{borderBottom:"2px solid black",color:"black"}:st==5?{color:"white"}:{color:"black"}
-  const s3 = st==3?{borderBottom:"2px solid black",color:"black"}:st==5?{color:"white"}:{color:"black"}
-  const s4 = st==4?{borderBottom:"2px solid black",color:"black"}:st==5?{color:"white"}:{color:"black"}
+  const s5 = st===5 ? {borderBottom:"2px solid white",color:"white"} : {color:"black"};
+  const s1 = st===1 ? {borderBottom:"2px solid black",color:"black"} : st===5 ? {color:"white"} : {color:"black"};
+  const s2 = st===2 ? {borderBottom:"2px solid black",color:"black"} : st===5 ? {color:"white"} : {color:"black"};
+  const s3 = st===3 ? {borderBottom:"2px solid black",color:"black"} : st===5 ? {color:"white"} : {color:"black"};
+  const s4 = st===4 ? {borderBottom:"2px solid black",color:"black"} : st===5 ? {color:"white"} : {color:"black"};
 
   const nav = s === 1
   ? {
@@ -70,37 +74,35 @@ export default function Header() {
   return (
     <>
     <div style={{position:"sticky",zIndex:"5 ",top:0,backgroundColor:"",paddingTop:"0px"}} >
-      <header class="w-full h-20 flex justify-center absolute " style={nav}>
-        <nav class="w-4/5 flex justify-between items-center font-bebas">
-          <h1 class="text-3xl uppercase">RASHI MARKETING</h1>
-          <ul class="md:flex gap-x-5 text-xl hidden">
-          <Link activeClass='active' to='introlink' spy={true} smooth={true} offset={0} duration={500}>
-              <li class="cursor-pointer">
+      <header className="w-full h-20 flex justify-center absolute " style={nav}>
+        <nav className="w-4/5 flex justify-between items-center font-bebas">
+          <h1 className="text-3xl uppercase flex items-center">
+            <img src={logo} alt="Logo" className="h-8 mr-2" /> RASHI MARKETING
+          </h1>
+          <ul className="md:flex gap-x-5 text-xl hidden">
+            <Link activeClass='active' to='introlink' spy={true} smooth={true} offset={0} duration={500}>
+              <li className="cursor-pointer">
                 <div style={s5}>Home</div>
               </li>
-          </Link>
+            </Link>
             <Link activeClass='active' to='aboutlink' spy={true} smooth={true} offset={0} duration={500}>
-              <li class="cursor-pointer">
+              <li className="cursor-pointer">
                 <div style={s1}>About Us</div>
               </li>
             </Link>
             {/* <Link activeClass='active' to='movielink' spy={true} smooth={true} offset={-80} duration={500}>
-              <li class="cursor-pointer">
+              <li className="cursor-pointer">
                 <div style={s2}>Our Movies</div>
               </li>
             </Link> */}
             <Link activeClass='active' to='servicelink' spy={true} smooth={true} offset={-100} duration={500}>
-              <li class="cursor-pointer">
+              <li className="cursor-pointer">
                 <div style={s3}>Our Products</div>
               </li>
             </Link>
-            <Link activeClass='active' to='ourpeople' spy={true} smooth={true} offset={-100} duration={500}>
-              <li class="cursor-pointer">
-                <div style={s3}>People</div>
-              </li>
-            </Link>
+            
             <Link activeClass='active' to='contactlink' spy={true} smooth={true} offset={0} duration={500}>
-              <li class="cursor-pointer">
+              <li className="cursor-pointer">
                 <div style={s4}>Contact Us</div>
               </li>
             </Link>
