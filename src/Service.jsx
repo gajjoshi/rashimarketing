@@ -351,6 +351,8 @@ export default function Service() {
                   ))}
                 </Slider>
               </div>
+              <div style={{marginTop:"50px"}}>
+          </div>
 
               
 
@@ -384,8 +386,14 @@ export default function Service() {
                         </div>
                       </div>
                       <p className="caption">{item.caption}</p>
+                      <div style={{marginTop:"50px"}}>
+          </div>
                       
                     </div>
+                    
+
+
+                    
 
                     
 
@@ -405,6 +413,7 @@ export default function Service() {
 
                   ))}
                 </Slider>
+                
               </div>
 
 
@@ -453,6 +462,8 @@ export default function Service() {
 
                   ))}
                 </Slider>
+                <div style={{marginTop:"50px"}}>
+          </div>
               </div>
 
 
