@@ -15,11 +15,21 @@ import c1 from "./assets/c1.png";
 import c2 from "./assets/c2.png";
 import c3 from "./assets/c3.png";
 
+
 import d1 from "./assets/d1.png";
+
 
 import e1 from "./assets/e1.png";
 import e2 from "./assets/e2.png";
 import e3 from "./assets/e3.png";
+
+
+import f1 from "./assets/owp1.jpg";
+import f2 from "./assets/owp2.jpg";
+import f3 from "./assets/owp3.jpg";
+import f4 from "./assets/owp4.jpg";
+
+
 
 
 const data1 = [
@@ -232,6 +242,81 @@ const data5 = [
     image: e3
   }
 ];
+
+
+
+
+
+
+
+
+
+const data6 = [
+  {
+    id: 1,
+    title: "WPE FRX-09",
+    description: "Image",
+    caption: (
+      <>
+      <h1 style={{color:"orange"}}>FIRE RETARDANT FOR FABRIC TEXTILES / WOOD/ PAPER/ Ply </h1>
+      <p>Color :	Colorless</p>
+        <p>pH	: 7.0 to 8.0</p>
+        <p>Property :	Water Soluble</p>
+        <p>State :	Liquid</p>
+      </>
+    ),
+    image: f1
+  },
+  {
+    id: 2,
+    title: "WPE55 PIPE COLLAR",
+    description: "Image",
+    caption: (
+      <>
+        
+      </>
+    ),
+    image: f2
+  },
+  {
+    id: 3,
+    title: "WPE55 PLUG",
+    description: "Image",
+    caption: <>
+    
+  </>,
+    image: f3
+  },
+  {
+    id: 4,
+    title: "WPE56-PUDDLE FLANGE",
+    description: "Image",
+    caption: <>
+    
+  </>,
+    image: f4
+  }
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -463,8 +548,87 @@ export default function Service() {
                   ))}
                 </Slider>
                 <div style={{marginTop:"50px"}}>
-          </div>
+                </div>
               </div>
+
+
+
+
+
+
+
+
+              <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
+                OTHER WATERPROOFING MATERIALS
+              </h1>
+              <div className="card-slider-container">
+                <Slider {...settings} className="card-slider">
+                  {data6.map((item) => (
+                    <div key={item.id} className="flip-card-container">
+                      <div
+                        className={`flip-card ${
+                          flippedCards.includes(item.id) ? "flipped" : ""
+                        }`}
+                        onClick={() => handleCardClick(item.id)}
+                      >
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front">
+                            <h2 className="title">{item.title}</h2>
+                          </div>
+                          <div className="flip-card-back">
+                            <img src={item.image} alt={item.title} />
+                          </div>
+                        </div>
+                      </div>
+                      <p className="caption">{item.caption}</p>
+                      
+                    </div>
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  ))}
+                </Slider>
+                <div style={{marginTop:"50px"}}>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
