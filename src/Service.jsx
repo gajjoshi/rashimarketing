@@ -106,7 +106,7 @@ const data2 = [
   },
   {
     id: 2,
-    title: "SMART CARE MEMBRANE",
+    title: "SMART KARE MEMBRANE",
     description: "Image",
     caption: (
       <>
@@ -381,74 +381,6 @@ export default function Service() {
             Our PRODUCTS
           </p>
           <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
-            GLASS FIBRE
-          </h1>
-          <div className="card-slider-container">
-            <Slider {...settings} className="card-slider">
-              {data1.map((item) => (
-                <div key={item.id} className="flip-card-container">
-                  <div
-                    className={`flip-card ${
-                      flippedCards.includes(item.id) ? "flipped" : ""
-                    }`}
-                    onClick={() => handleCardClick(item.id)}
-                  >
-                    <div className="flip-card-inner">
-                      <div className="flip-card-front">
-                        <h2 className="title">{item.title}</h2>
-                      </div>
-                      <div className="flip-card-back">
-                        <img src={item.image} alt={item.title} />
-                      </div>
-                    </div>
-                  </div>
-                  <p className="caption">{item.caption}</p>
-                </div>
-              ))}
-            </Slider>
-          </div>
-          <div style={{marginTop:"50px"}}>
-          </div>
-          <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
-                Waterproofing Membrane
-              </h1>
-              <div className="card-slider-container">
-                <Slider {...settings} className="card-slider">
-                  {data2.map((item) => (
-                    <div key={item.id} className="flip-card-container">
-                      <div
-                        className={`flip-card ${
-                          flippedCards.includes(item.id) ? "flipped" : ""
-                        }`}
-                        onClick={() => handleCardClick(item.id)}
-                      >
-                        <div className="flip-card-inner">
-                          <div className="flip-card-front">
-                            <h2 className="title">{item.title}</h2>
-                          </div>
-                          <div className="flip-card-back">
-                            <img src={item.image} alt={item.title} />
-                          </div>
-                        </div>
-                      </div>
-                      <p className="caption">{item.caption}</p>
-                    </div>
-                  ))}
-                </Slider>
-              </div>
-              <div style={{marginTop:"50px"}}>
-          </div>
-
-              
-
-
-
-
-
-
-          {showMore && (
-            <>
-              <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
                 PREFINISHED SIDING
               </h1>
               <div className="card-slider-container">
@@ -500,6 +432,48 @@ export default function Service() {
                 </Slider>
                 
               </div>
+          <div style={{marginTop:"50px"}}>
+          </div>
+          <h1 className="text-6xl md:text-3xl lg:text-7xl uppercase text-center text-white sm:text-2xl py-0">
+                Waterproofing Membrane
+              </h1>
+              <div className="card-slider-container">
+                <Slider {...settings} className="card-slider">
+                  {data2.map((item) => (
+                    <div key={item.id} className="flip-card-container">
+                      <div
+                        className={`flip-card ${
+                          flippedCards.includes(item.id) ? "flipped" : ""
+                        }`}
+                        onClick={() => handleCardClick(item.id)}
+                      >
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front">
+                            <h2 className="title">{item.title}</h2>
+                          </div>
+                          <div className="flip-card-back">
+                            <img src={item.image} alt={item.title} />
+                          </div>
+                        </div>
+                      </div>
+                      <p className="caption">{item.caption}</p>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+              <div style={{marginTop:"50px"}}>
+          </div>
+
+              
+
+
+
+
+
+
+          {showMore && (
+            <>
+              
 
 
 
@@ -602,8 +576,7 @@ export default function Service() {
 
                   ))}
                 </Slider>
-                <div style={{marginTop:"50px"}}>
-                </div>
+                
               </div>
 
 
